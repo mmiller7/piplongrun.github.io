@@ -67,6 +67,7 @@ if (typeof plxDwnld === "undefined") {
 
             if (partKeyNode.singleNodeValue) {
                 window.location.href = downloadUrl.replace('{baseuri}', baseUri).replace('{partkey}', partKeyNode.singleNodeValue.textContent).replace('{token}', accessToken);
+                prompt("Direct URL:",downloadUrl.replace('{baseuri}', baseUri).replace('{partkey}', partKeyNode.singleNodeValue.textContent).replace('{token}', accessToken));
             } else {
                 alert("You are currently not viewing a media item.");
             }
